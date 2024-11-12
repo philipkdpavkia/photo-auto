@@ -1,8 +1,8 @@
 import random
 from bs4 import BeautifulSoup
 
-# Folder containing your images
-image_folder = "/images"  # Cambiato per usare un path relativo
+# Usa path relativi
+image_folder = "images"  # La cartella images è nella root del progetto
 num_images = 136
 
 def update_html():
@@ -21,7 +21,7 @@ def update_html():
     
     # Aggiorna i src delle immagini
     for img, new_image in zip(gallery_images, selected_images):
-        img['src'] = f"{image_folder}/{new_image}"
+        img['src'] = f"/{image_folder}/{new_image}"  # Assicurati che il path cominci con /
         img['alt'] = f"Gallery Image - {new_image}"
 
     # Scrivi l'HTML aggiornato

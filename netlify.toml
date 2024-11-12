@@ -1,3 +1,21 @@
 [build]
-  publish = "."   # La directory che contiene i file da pubblicare
-  command = ""    # Non abbiamo bisogno di un comando di build
+  publish = "."
+  command = ""
+
+[build.environment]
+  NODE_VERSION = "16"    # Usiamo una versione LTS stabile e sicuramente disponibile
+  PYTHON_VERSION = "none"
+  RUBY_VERSION = "none"
+  PHP_VERSION = "none"
+  GO_VERSION = "none"
+
+[build.processing]
+  skip_processing = true
+
+[functions]
+  directory = ""
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

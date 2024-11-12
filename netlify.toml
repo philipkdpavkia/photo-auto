@@ -1,0 +1,3 @@
+[build]
+  publish = "."   # La directory che contiene i file da pubblicare
+  command = ""    # Non abbiamo bisogno di un comando di build

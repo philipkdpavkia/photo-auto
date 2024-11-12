@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="it">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Photo Blog</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;700&family=Syncopate:wght@400;700" rel="stylesheet">
-    <style>
-        :root {
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Photo Blog
+  </title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;700&amp;family=Syncopate:wght@400;700" rel="stylesheet"/>
+  <style>
+   :root {
             --primary: #f0f0f0;
             --background: #0a0a0a;
             --accent: #ff3366;
@@ -235,65 +237,83 @@
             opacity: 1;
             transform: translateY(0);
         }
-    </style>
-</head>
-<body>
-    <div class="loading-overlay">
-        <div class="loader"></div>
+  </style>
+ </head>
+ <body>
+  <div class="loading-overlay">
+   <div class="loader">
+   </div>
+  </div>
+  <header class="header">
+   <nav class="nav">
+    <a class="logo" href="#">
+     PhotoBlog
+    </a>
+    <div class="nav-links">
+     <a href="#gallery">
+      Gallery
+     </a>
+     <a href="#about">
+      About
+     </a>
+     <a href="#contact">
+      Contact
+     </a>
     </div>
-
-    <header class="header">
-        <nav class="nav">
-            <a href="#" class="logo">PhotoBlog</a>
-            <div class="nav-links">
-                <a href="#gallery">Gallery</a>
-                <a href="#about">About</a>
-                <a href="#contact">Contact</a>
-            </div>
-            <button class="mobile-menu-btn">☰</button>
-        </nav>
-    </header>
-
-    <main>
-        <section class="hero">
-            <div class="hero-content">
-                <h1 class="fade-in">Catturando Momenti</h1>
-                <p class="fade-in">Esplora il mondo attraverso il mio obiettivo</p>
-            </div>
-        </section>
-
-        <section id="gallery" class="gallery">
-            <!-- Placeholder images - replace src with your actual images -->
-            <div class="gallery-item fade-in">
-                <img src="/images/blog-1.jpg" alt="Gallery Image 1">
-                <div class="gallery-item-overlay">
-                    <span>Explora</span>
-                </div>
-            </div>
-            <div class="gallery-item fade-in">
-                <img src="/images/blog-2.jpg" alt="Gallery Image 2">
-                <div class="gallery-item-overlay">
-                    <span>Explora</span>
-                </div>
-            </div>
-            <div class="gallery-item fade-in">
-                <img src="/images/blog-3.jpg" alt="Gallery Image 3">
-                <div class="gallery-item-overlay">
-                    <span>Explora</span>
-                </div>
-            </div>
-        </section>
-
-        <section class="instagram-feed fade-in">
-            <h2>Instagram Feed</h2>
-            <div class="instagram-grid">
-                <!-- Instagram feed will be populated by JavaScript -->
-            </div>
-        </section>
-    </main>
-
-    <script>
-        // Loading animation
+    <button class="mobile-menu-btn">
+     ☰
+    </button>
+   </nav>
+  </header>
+  <main>
+   <section class="hero">
+    <div class="hero-content">
+     <h1 class="fade-in">
+      Catturando Momenti
+     </h1>
+     <p class="fade-in">
+      Esplora il mondo attraverso il mio obiettivo
+     </p>
+    </div>
+   </section>
+   <section class="gallery" id="gallery">
+    <!-- Placeholder images - replace src with your actual images -->
+    <div class="gallery-item fade-in">
+     <img alt="Gallery Image - blog-128.jpg" src="/images/blog-128.jpg"/>
+     <div class="gallery-item-overlay">
+      <span>
+       Explora
+      </span>
+     </div>
+    </div>
+    <div class="gallery-item fade-in">
+     <img alt="Gallery Image - blog-110.jpg" src="/images/blog-110.jpg"/>
+     <div class="gallery-item-overlay">
+      <span>
+       Explora
+      </span>
+     </div>
+    </div>
+    <div class="gallery-item fade-in">
+     <img alt="Gallery Image - blog-106.jpg" src="/images/blog-106.jpg"/>
+     <div class="gallery-item-overlay">
+      <span>
+       Explora
+      </span>
+     </div>
+    </div>
+   </section>
+   <section class="instagram-feed fade-in">
+    <h2>
+     Instagram Feed
+    </h2>
+    <div class="instagram-grid">
+     <!-- Instagram feed will be populated by JavaScript -->
+    </div>
+   </section>
+  </main>
+  <script>
+   // Loading animation
         window.addEventListener('load', () => {
             document.querySelector('.loading-overlay').style.opacity = '0';
             setTimeout(() => {
@@ -357,6 +377,6 @@
         mobileMenuBtn.addEventListener('click', () => {
             navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
         });
-    </script>
-</body>
+  </script>
+ </body>
 </html>

@@ -1,0 +1,13 @@
+name: Update Images Daily
+
+on:
+  schedule:
+    - cron: '0 0 * * *'  # Esegui ogni giorno alle 00:00
+
+jobs:
+  update_images:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Run update script
+        run: C:\Users\franc\Documents\photo-auto\photo-auto\update-photos.py  # Sostituisci con il percorso del tuo script

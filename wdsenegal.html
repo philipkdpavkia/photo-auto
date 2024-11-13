@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Senegal Photography Workshop 2024-2025 | Francesco Pavia</title>
+    <meta name="description" content="Photography workshop in Senegal with Francesco Pavia. A photographic journey through villages and deserts. 2024-2025 dates, small groups, all levels welcome.">
+    <link rel="canonical" href="https://francescopavia.org/workshop/senegal" />
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Script traduzioni -->
+    <script>
+        const translations = {
+            en: {
+                "back": "BACK",
+                "title": "Senegal Adventures",
+                "description": "A photographic journey of 8 days discovering Senegal, its traditions and its people. We will travel through villages, meet local families and capture the essence of this extraordinary country.",
+                "learn": "During the workshop you will learn:",
+                "technique1": "Travel photography approach techniques",
+                "technique2": "How to build a visual narrative",
+                "technique3": "Natural light management",
+                "technique4": "Editing and post-production",
+                "accommodation": "We will stay in selected accommodations that will allow us to experience local culture up close. The group will be limited to 8 participants to ensure an optimal learning experience.",
+                "duration": "Duration",
+                "duration_value": "8 days",
+                "dates": "Dates",
+                "dates_value": "December 12-19, 2025",
+                "level": "Level",
+                "level_value": "All levels",
+                "price": "Price",
+                "price_value": "€2,000",
+                "spots": "Available spots",
+                "spots_value": "6/8",
+                "book": "Book Now"
+            },
+            it: {
+                "back": "INDIETRO",
+                "title": "Avventure in Senegal",
+                "description": "Un viaggio fotografico di 8 giorni alla scoperta del Senegal, delle sue tradizioni e della sua gente. Attraverseremo villaggi, incontreremo famiglie locali e cattureremo l'essenza di questo straordinario paese.",
+                "learn": "Durante il workshop imparerai:",
+                "technique1": "Tecniche di approccio alla fotografia di viaggio",
+                "technique2": "Come costruire una narrativa visiva",
+                "technique3": "Gestione della luce naturale",
+                "technique4": "Editing e post-produzione",
+                "accommodation": "Alloggeremo in strutture selezionate che ci permetteranno di vivere a stretto contatto con la cultura locale. Il gruppo sarà limitato a 8 partecipanti per garantire un'esperienza formativa ottimale.",
+                "duration": "Durata",
+                "duration_value": "8 giorni",
+                "dates": "Date",
+                "dates_value": "12-19 Dicembre 2025",
+                "level": "Livello",
+                "level_value": "Tutti i livelli",
+                "price": "Prezzo",
+                "price_value": "€2.000",
+                "spots": "Posti disponibili",
+                "spots_value": "6/8",
+                "book": "Iscriviti Ora"
+            }
+        };
+
+        class LanguageManager {
+            constructor() {
+                this.currentLang = localStorage.getItem('userLanguage') || 'en';
+                document.documentElement.lang = this.currentLang;
+            }
+
+            setLanguage(lang) {
+                if (translations[lang]) {
+                    this.currentLang = lang;
+                    localStorage.setItem('userLanguage', lang);
+                    document.documentElement.lang = lang;
+                    this.updateContent();
+                }
+            }
+
+            translate(key) {
+                return translations[this.currentLang][key] || key;
+            }
+
+            updateContent() {
+                document.querySelectorAll('[data-i18n]').forEach(element => {
+                    const key = element.getAttribute('data-i18n');
+                    if (translations[this.currentLang][key]) {
+                        element.innerHTML = translations[this.currentLang][key];
+                    }
+                });
+            }
+        }
+
+        let langManager;
+        document.addEventListener('DOMContentLoaded', () => {
+            langManager = new LanguageManager();
+            langManager.updateContent();
+        });
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Event",
+      "name": "Senegal Photography Workshop - Senegal Adventures",
+      "description": "Photography workshop in Senegal with Francesco Pavia",
+      "startDate": "2025-12-12",
+      "endDate": "2025-12-19",
+      "organizer": {
+        "@type": "Person",
+        "name": "Francesco Pavia"
+      },
+      "eventStatus": "https://schema.org/ScheduledEvent",
+      "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+      "location": {
+        "@type": "Place",
+        "name": "Senegal"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "2500",
+        "priceCurrency": "EUR"
+      }
+    }
+    </script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', sans-serif;
+            background: #000;
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        .nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 1rem 2rem;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(10px);
+        }
+
+        .logo {
+            font-size: 1.2rem;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .menu {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .menu-item {
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 600;
+            letter-spacing: 2px;
+            padding: 0.5rem 1rem;
+            border: 2px solid #fff;
+            border-radius: 3px;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+        }
+
+        .menu-item:hover {
+            background: #fff;
+            color: #000;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(255,255,255,0.2);
+        }
+
+        .workshop-detail {
+            padding: 120px 5vw 40px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .workshop-hero {
+            width: 100%;
+            height: 70vh;
+            object-fit: cover;
+            margin-bottom: 4rem;
+        }
+
+        .workshop-info {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 4rem;
+        }
+
+        .workshop-content {
+            color: #fff;
+            position: relative;
+            z-index: 1;
+        }
+
+        .workshop-content h1 {
+            font-size: 3rem;
+            margin-bottom: 2rem;
+            font-weight: bold;
+        }
+
+        .workshop-content p {
+            line-height: 1.8;
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .workshop-content ul {
+            margin: 1rem 0 2rem 1.5rem;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .workshop-content li {
+            margin-bottom: 0.5rem;
+            line-height: 1.6;
+        }
+
+        .workshop-sidebar {
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 2rem;
+            height: fit-content;
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(10px);
+        }
+
+        .info-block {
+            margin-bottom: 1.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .info-block:last-child {
+            border-bottom: none;
+            margin-bottom: 2rem;
+        }
+
+        .info-label {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.6);
+            margin-bottom: 0.5rem;
+        }
+
+        .info-value {
+            font-size: 1.2rem;
+            color: #fff;
+            font-weight: 500;
+        }
+
+        .workshop-button {
+            display: inline-block;
+            width: 100%;
+            padding: 1rem;
+            background: #fff;
+            color: #000;
+            text-align: center;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            border-radius: 3px;
+        }
+
+        .workshop-button:hover {
+            opacity: 0.8;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(255,255,255,0.2);
+        }
+
+        .lang-selector {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 5px 10px;
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(5px);
+            border-radius: 15px;
+        }
+
+        .lang-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 5px;
+            color: #fff;
+            font-family: inherit;
+            font-size: 0.9rem;
+            transition: opacity 0.3s;
+        }
+
+        .lang-btn:hover {
+            opacity: 0.8;
+        }
+
+        @media (max-width: 768px) {
+            .nav {
+                padding: 0.5rem;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+                gap: 1rem;
+            }
+
+            .logo {
+                font-size: 1rem;
+            }
+
+            .menu-item {
+                font-size: 0.8rem;
+                padding: 0.3rem 0.8rem;
+            }
+
+            .workshop-detail {
+                padding: 60px 1rem 20px;
+            }
+
+            .workshop-info {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .workshop-content h1 {
+                font-size: 2rem;
+                margin-bottom: 1.5rem;
+            }
+
+            .workshop-content p {
+                font-size: 1rem;
+                margin-bottom: 1.5rem;
+            }
+            
+            .workshop-hero {
+                height: 50vh;
+                margin-bottom: 2rem;
+            }
+
+            .workshop-sidebar {
+                position: relative;
+                padding: 1.5rem;
+            }
+
+            .info-block {
+                margin-bottom: 1rem;
+                padding-bottom: 1rem;
+            }
+
+            .info-label {
+                font-size: 0.8rem;
+            }
+
+            .info-value {
+                font-size: 1.1rem;
+            }
+
+            .lang-selector {
+                bottom: 15px;
+                right: 15px;
+                padding: 3px 8px;
+            }
+
+            .lang-btn {
+                font-size: 0.8rem;
+            }
+        }
+
+        @media (hover: none) {
+            .menu-item:active {
+                background: #fff;
+                color: #000;
+            }
+
+            .workshop-button:active {
+                opacity: 0.8;
+                transform: translateY(-2px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <div class="logo" onclick="window.location.href='index.html'">FRANCESCO PAVIA</div>
+        <div class="menu">
+            <div class="menu-item" onclick="window.location.href='workshop-documentary.html'" data-i18n="back">BACK</div>
+        </div>
+    </nav>
+
+    <div class="lang-selector">
+        <button class="lang-btn" onclick="langManager.setLanguage('en')">EN</button>
+        |
+        <button class="lang-btn" onclick="langManager.setLanguage('it')">IT</button>
+    </div>
+
+    <div class="workshop-detail">
+        <img src="images/workshop/senegal-hero.jpg" alt="Workshop Senegal" class="workshop-hero" loading="eager" fetchpriority="high">
+        
+        <div class="workshop-info">
+            <div class="workshop-content">
+                <h1 data-i18n="title">Senegal Adventures</h1>
+                <p data-i18n="description">
+                    A photographic journey of 8 days discovering Senegal, its traditions and its people. 
+                    We will travel through villages, meet local families and capture the essence of this extraordinary country.
+                </p>
+                <p data-i18n="learn">
+                    During the workshop you will learn:
+                </p>
+                <ul>
+                    <li data-i18n="technique1">Travel photography approach techniques</li>
+                    <li data-i18n="technique2">How to build a visual narrative</li>
+                    <li data-i18n="technique3">Natural light management</li>
+                    <li data-i18n="technique4">Editing and post-production</li>
+                </ul>
+                <p data-i18n="accommodation">
+                    We will stay in selected accommodations that will allow us to experience local culture up close.
+                    The group will be limited to 8 participants to ensure an optimal learning experience.
+                </p>
+            </div>
+            
+            <div class="workshop-sidebar">
+                <div class="info-block">
+                    <div class="info-label" data-i18n="duration">Duration</div>
+                    <div class="info-value" data-i18n="duration_value">8 days</div>
+                </div>
+                <div class="info-block">
+                    <div class="info-label" data-i18n="dates">Dates</div>
+                    <div class="info-value" data-i18n="dates_value">December 12-19, 2025</div>
+                </div>
+                <div class="info-block">
+                    <div class="info-label" data-i18n="level">Level</div>
+                    <div class="info-value" data-i18n="level_value">All levels</div>
+                </div>
+                <div class="info-block">
+                    <div class="info-label" data-i18n="price">Price</div>
+                    <div class="info-value" data-i18n="price_value">€2,000</div>
+                </div>
+                <div class="info-block">
+                    <div class="info-label" data-i18n="spots">Available spots</div>
+                    <div class="info-value" data-i18n="spots_value">6/8</div>
+                </div>
+                <a href="iscrizione.html?workshop=senegal" class="workshop-button" data-i18n="book">Book Now</a>
+            </div>
+        </div>
+    </div>
+</body>

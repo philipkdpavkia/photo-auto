@@ -1,0 +1,21 @@
+[build]
+  publish = "."
+  command = ""
+
+[build.environment]
+  NODE_VERSION = "16"
+  PYTHON_VERSION = "3.8"    # Una versione specifica invece di "none"
+  RUBY_VERSION = "2.7.2"
+  PHP_VERSION = "8.0"
+  GO_VERSION = "1.19"
+
+[build.processing]
+  skip_processing = true
+
+[functions]
+  directory = ""
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

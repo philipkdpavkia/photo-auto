@@ -3,6 +3,9 @@
  <head>
   <meta charset="utf-8"/>
   <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta name="description" content="International photography workshops at fpworkshop.photo. Street photography in Cuba, cultural photography in Senegal, festivals im Mexico with photographer Franncesco Pavia">
+  <meta name="keywords" content="photography workshop, travel photography, francesco pavia, cuba workshop, senegal photography, mexico photography">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <title>
    FP Photo Workshop
   </title>
@@ -93,25 +96,37 @@
   </style>
  </head>
  <body>
-  <header class="header">
-   <nav class="nav">
-    <a class="logo" href="#">
-     FP PHOTO WORKSHOP
-    </a>
-    <div class="nav-links">
-     <a href="#gallery">
-      Gallery
-     </a>
-     <a href="#about">
-      About
-     </a>
-     <a href="#contact">
-      Contact
-     </a>
-    </div>
-   </nav>
-  </header>
+    <header class="header">
+        <nav class="nav">
+          <a class="logo" href="#">FP PHOTO WORKSHOP</a>
+          <div class="nav-links">
+            <a href="#gallery">Gallery</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+            <a href="https://instagram.com/fpphotoworkshop" target="_blank" class="instagram-link">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </div>
+        </nav>
+       </header>
   <main>
+    <style>
+        .instagram-link {
+         color: var(--primary);
+         font-size: 1.5rem;
+         transition: var(--transition);
+        }
+        
+        .instagram-link:hover {
+         color: var(--accent);
+        }
+        
+        @media screen and (max-width: 768px) {
+         .instagram-link {
+           font-size: 1.2rem;
+         }
+        }
+        </style>
    <style>
     .hero {
                 margin-top: 60px;
@@ -188,7 +203,7 @@
    </style>
    <section class="hero">
     <a class="workshop-link" href="wdcuba.html">
-     <img alt="Havana Life" src="/images/cuba/cub-10.jpg"/>
+     <img alt="Havana Life" src="/images/cuba/cub-3.jpg"/>
      <div class="workshop-text">
       <h2>
        Havana Life
@@ -199,7 +214,7 @@
      </div>
     </a>
     <a class="workshop-link" href="wdsenegal.html">
-     <img alt="Senegal Adventures" src="/images/senegal/sen-1.jpg"/>
+     <img alt="Senegal Adventures" src="/images/senegal/sen-29.jpg"/>
      <div class="workshop-text">
       <h2>
        Senegal Adventures
@@ -210,7 +225,7 @@
      </div>
     </a>
     <a class="workshop-link" href="wdmexico.html">
-     <img alt="Dia de Muertos" src="/images/mexico/mex-2.jpg"/>
+     <img alt="Dia de Muertos" src="/images/mexico/mex-17.jpg"/>
      <div class="workshop-text">
       <h2>
        Dia de Muertos
@@ -226,16 +241,13 @@
    </h1>
    <section class="gallery">
     <div class="gallery-item">
-     <img alt="Gallery Image - blog-113.jpg" src="/images/blog-113.jpg"/>
+     <img alt="Gallery Image - blog-73.jpg" src="/images/blog-73.jpg"/>
     </div>
     <div class="gallery-item">
-     <img alt="Gallery Image - blog-29.jpg" src="/images/blog-29.jpg"/>
+     <img alt="Gallery Image - blog-85.jpg" src="/images/blog-85.jpg"/>
     </div>
     <div class="gallery-item">
-     <img alt="Gallery Image - blog-76.jpg" src="/images/blog-76.jpg"/>
-    </div>
-    <div class="gallery-item">
-     <img alt="Gallery Image - blog-36.jpg" src="/images/blog-36.jpg"/>
+     <img alt="Gallery Image - blog-53.jpg" src="/images/blog-53.jpg"/>
     </div>
    </section>
    <style>
@@ -316,6 +328,18 @@
             .contact h2 {
                 font-size: 1.5rem;
             }
+            @media screen and (max-width: 768px) {
+    .nav-links {
+        display: flex;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: black;
+        padding: 1rem;
+        justify-content: center;
+    }
+}
     
     .about p {
         font-size: 0.9rem;

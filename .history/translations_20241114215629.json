@@ -1,0 +1,106 @@
+{
+    "it": {
+      "menu": {
+        "gallery": "Galleria",
+        "about": "Chi Siamo",
+        "contact": "Contatti"
+      },
+      "hero": {
+        "havana": {
+          "title": "Vita all'Havana",
+          "subtitle": "Vagando per le strade della capitale"
+        },
+        "senegal": {
+          "title": "Avventure in Senegal",
+          "subtitle": "Un paese sorprendente pieno di anima"
+        },
+        "mexico": {
+          "title": "Dia de Muertos",
+          "subtitle": "Nelle montagne di Oaxaca"
+        }
+      },
+      "blog": {
+        "title": "Daily photo blog",
+        "description": "Ogni giorno tre scatti dei nostri allievi",
+        "text1": "Ogni giorno tre scatti dei nostri allievi. Uno spazio dedicato a mostrare i risultati dei nostri workshop fotografici, dove talento e passione si incontrano per creare immagini uniche e personali.",
+        "text2": "In ogni workshop insegniamo che la fotografia non è solo tecnica, ma un modo di vedere e interpretare il mondo. Questa galleria quotidiana è la testimonianza del percorso di crescita dei nostri studenti, delle loro scoperte e della loro evoluzione artistica.",
+        "text3": "Questo spazio è una vetrina in continuo movimento, dove ogni giorno tre nuove fotografie raccontano le storie, le emozioni e lo sguardo unico dei nostri allievi. Un archivio vivente che documenta i risultati dei nostri workshop in giro per il mondo."
+      },
+      "philosophy": {
+        "title": "La nostra filosofia",
+        "points": [
+          "Condividiamo ogni giorno tre scatti dei nostri allievi",
+          "Esploriamo insieme location uniche nel mondo",
+          "Sviluppiamo visione personale e tecnica",
+          "Creiamo una comunità internazionale di fotografi"
+        ]
+      },
+      "contact": {
+        "title": "Contatti",
+        "workshop": {
+          "title": "Workshop",
+          "text": "Per informazioni sui workshop fotografici:"
+        },
+        "photo": {
+          "title": "Lavori Fotografici",
+          "text": "Per commissioni e progetti personali:"
+        },
+        "phone": {
+          "title": "Telefono",
+          "text": "Per contatti diretti:"
+        }
+      }
+    },
+    "en": {
+      "menu": {
+        "gallery": "Gallery",
+        "about": "About",
+        "contact": "Contact"
+      },
+      "hero": {
+        "havana": {
+          "title": "Havana Life",
+          "subtitle": "Wandering through the streets of the capital"
+        },
+        "senegal": {
+          "title": "Senegal Adventures",
+          "subtitle": "A surprising country full of soul"
+        },
+        "mexico": {
+          "title": "Dia de Muertos",
+          "subtitle": "In the mountains of Oaxaca"
+        }
+      },
+      "blog": {
+        "title": "Daily photo blog",
+        "description": "Daily three shots from our students",
+        "text1": "Every day three shots from our students. A space dedicated to showing the results of our photography workshops, where talent and passion meet to create unique and personal images.",
+        "text2": "In each workshop we teach that photography is not just technique, but a way of seeing and interpreting the world. This daily gallery is a testimony to our students' growth journey, their discoveries, and their artistic evolution.",
+        "text3": "This space is a constantly moving showcase, where every day three new photographs tell the stories, emotions, and unique perspective of our students. A living archive documenting the results of our workshops around the world."
+      },
+      "philosophy": {
+        "title": "Our philosophy",
+        "points": [
+          "We share three shots from our students every day",
+          "We explore unique locations around the world together",
+          "We develop personal vision and technique",
+          "We create an international community of photographers"
+        ]
+      },
+      "contact": {
+        "title": "Contact",
+        "workshop": {
+          "title": "Workshop",
+          "text": "For photography workshop information:"
+        },
+        "photo": {
+          "title": "Photography Work",
+          "text": "For commissions and personal projects:"
+        },
+        "phone": {
+          "title": "Phone",
+          "text": "For direct contact:"
+        }
+      }
+    }
+  }

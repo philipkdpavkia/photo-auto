@@ -16,12 +16,12 @@ image_config = {
     'senegal': {
         'folder': 'images/senegal',
         'prefix': 'sen-',
-        'count': 17  # Modifica questo numero in base a quante foto hai nella cartella
+        'count': 38  # Modifica questo numero in base a quante foto hai nella cartella
     },
     'mexico': {
         'folder': 'images/mexico',
         'prefix': 'mex-',
-        'count': 38  # Modifica questo numero in base a quante foto hai nella cartella
+        'count': 17  # Modifica questo numero in base a quante foto hai nella cartella
     }
 }
 

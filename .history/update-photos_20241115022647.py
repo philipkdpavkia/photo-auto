@@ -11,17 +11,17 @@ image_config = {
     'cuba': {
         'folder': 'images/cuba',
         'prefix': 'cub-',
-        'count': 4  # Modifica questo numero in base a quante foto hai nella cartella
+        'count': 30  # Modifica questo numero in base a quante foto hai nella cartella
     },
     'senegal': {
         'folder': 'images/senegal',
         'prefix': 'sen-',
-        'count': 17  # Modifica questo numero in base a quante foto hai nella cartella
+        'count': 30  # Modifica questo numero in base a quante foto hai nella cartella
     },
     'mexico': {
         'folder': 'images/mexico',
         'prefix': 'mex-',
-        'count': 38  # Modifica questo numero in base a quante foto hai nella cartella
+        'count': 30  # Modifica questo numero in base a quante foto hai nella cartella
     }
 }
 
@@ -30,7 +30,8 @@ def get_random_image(config):
     Genera un path casuale per un'immagine basato sulla configurazione fornita
     """
     number = random.randint(1, config['count'])
-    return f"/{config['folder']}/{config['prefix']}{number}.webp"
+    return f"/{config['folder']}/{config['prefix']}{number}.webp
+    "
 
 def update_html():
     """

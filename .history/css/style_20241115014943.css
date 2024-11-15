@@ -13,9 +13,9 @@
 }
 
 :root {
-    --primary: #ffffff;
-    --background: #030303;
-    --accent: #FF6161;
+    --primary: #090909;
+    --background: #ffffff;
+    --accent: #AC0C2D;
     --transition: all 0.4s ease;
     --overlay-bg: rgba(0, 0, 0, 0.4);
     --hover-bg: rgba(0, 0, 0, 0.6);
@@ -119,7 +119,6 @@ body {
     font-weight: 700;
     z-index: 1001;
     transition: var(--transition);
-    color:#000000;
 }
 
 .lang-switch:hover {
@@ -363,7 +362,6 @@ body {
     text-align: center;
     text-decoration: none;
     transition: var(--transition);
-    color: #000000;
 }
 
 .workshop-button:hover {

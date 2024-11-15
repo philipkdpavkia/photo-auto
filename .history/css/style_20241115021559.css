@@ -15,7 +15,7 @@
 :root {
     --primary: #ffffff;
     --background: #030303;
-    --accent: #FF6161;
+    --accent: #8B9B3D;
     --transition: all 0.4s ease;
     --overlay-bg: rgba(0, 0, 0, 0.4);
     --hover-bg: rgba(0, 0, 0, 0.6);
@@ -363,7 +363,6 @@ body {
     text-align: center;
     text-decoration: none;
     transition: var(--transition);
-    color: #000000;
 }
 
 .workshop-button:hover {

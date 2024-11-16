@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Workshop registration - Francesco Pavia</title>
-    <link href="/css/style.css" rel="stylesheet" media="screen"/>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" media="all"/>
-     <!-- Script traduzioni -->
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- Script traduzioni -->
     <script>
         const translations = {
             en: {
@@ -65,7 +65,6 @@
             constructor() {
                 this.currentLang = localStorage.getItem('userLanguage') || 'en';
                 document.documentElement.lang = this.currentLang;
-                this.updateLangButton();
             }
 
             setLanguage(lang) {
@@ -75,16 +74,8 @@
                     document.documentElement.lang = lang;
                     this.updateContent();
                     this.updateWorkshopDetails();
-                    this.updateLangButton(); 
                 }
             }
-            updateLangButton() {
-        const button = document.getElementById('langSwitch');
-        if (button) {
-            button.textContent = this.currentLang === 'it' ? 'EN' : 'IT';
-            button.onclick = () => this.setLanguage(this.currentLang === 'it' ? 'en' : 'it');
-        }
-    }
 
             translate(key) {
                 return translations[this.currentLang][key] || key;
@@ -119,64 +110,238 @@
             langManager.updateWorkshopDetails();
         });
     </script>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: 'Helvetica Neue', sans-serif;
+        background: #000;
+        color: #fff;
+    }
+
+    .nav {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        padding: 2rem;
+        z-index: 100;
+        display: flex;
+        justify-content: space-between;
+        mix-blend-mode: difference;
+    }
+
+    .logo {
+        font-size: 1.5rem;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    .menu {
+        display: flex;
+        gap: 2rem;
+    }
+
+    .menu-item {
+        cursor: pointer;
+        transition: opacity 0.3s;
+    }
+
+    .menu-item:hover {
+        opacity: 0.7;
+    }
+
+    .form-container {
+        padding: 120px 5vw;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .selected-workshop {
+        background: rgba(255, 255, 255, 0.1);
+        padding: 2rem;
+        border-radius: 8px;
+        margin-bottom: 2rem;
+        backdrop-filter: blur(10px);
+    }
+
+    .workshop-title {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        color: #fff;
+    }
+
+    .workshop-details {
+        color: rgba(255, 255, 255, 0.7);
+        margin-bottom: 2rem;
+    }
+
+    .form-group {
+        margin-bottom: 1.5rem;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 0.5rem;
+        font-size: 0.9rem;
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 0.7);
+    }
+
+    input, textarea {
+        width: 100%;
+        padding: 1rem;
+        background: rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 4px;
+        color: #fff;
+        font-family: inherit;
+        font-size: 1rem;
+        transition: border-color 0.3s;
+    }
+
+    input:focus, textarea:focus {
+        outline: none;
+        border-color: rgba(255, 255, 255, 0.5);
+    }
+
+    textarea {
+        min-height: 150px;
+        resize: vertical;
+    }
+
+    .submit-button {
+        display: inline-block;
+        padding: 1rem 2rem;
+        background: rgba(255, 255, 255, 0.9);
+        color: #000;
+        border: none;
+        border-radius: 4px;
+        font-size: 1rem;
+        font-weight: bold;
+        cursor: pointer;
+        transition: all 0.3s;
+    }
+
+    .submit-button:hover {
+        background: #fff;
+        transform: translateY(-2px);
+    }
+
+    /* Language Selector Styles corretto */
+    .lang-selector {
+        position: fixed;
+        top: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 1000;
+        display: inline-block;
+        background: none;
+        mix-blend-mode: difference;
+        color: #fff;
+        background: rgba(0, 0, 0, 0.5);
+        padding: 5px 10px;
+        border-radius: 4px;
+    }
+
+    .lang-btn {
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 5px;
+        color: #fff;
+        font-family: inherit;
+        transition: opacity 0.3s;
+    }
+
+    .lang-btn:hover {
+        opacity: 0.7;
+    }
+
+    .lang-btn.active {
+        text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+        .project-title { 
+            font-size: 2rem; 
+        }
+        .project-description { 
+            font-size: 1rem; 
+        }
+        .form-container {
+            padding: 100px 5vw;
+        }
+    }
+</style>
 </head>
-<body class="registration-page">
+<body>
     <div class="lang-selector">
-        <button class="lang-switch" id="langSwitch" onclick="langManager.setLanguage('it')">IT</button>
+        <button class="lang-btn" onclick="langManager.setLanguage('en')">EN</button>
+        |
+        <button class="lang-btn" onclick="langManager.setLanguage('it')">IT</button>
     </div>
 
     <nav class="nav">
-        <div class="logo" onclick="window.location.href='/'">FRANCESCO PAVIA</div>
+        <div class="logo" onclick="window.location.href='index.html'">FRANCESCO PAVIA</div>
         <div class="menu">
             <div class="menu-item" onclick="history.back()" data-i18n="back">BACK</div>
         </div>
     </nav>
 
     <div class="form-container">
-        <div class="workshop-header">
+        <div class="selected-workshop">
             <h1 class="workshop-title" id="workshopTitle" data-i18n="workshop_registration">Workshop registration</h1>
             <div class="workshop-details" id="workshopDetails"></div>
         </div>
 
-        <form action="https://formspree.io/f/mldenwbq" method="POST" class="registration-form">
+
+        <form action="https://formspree.io/f/mldenwbq" method="POST">
             <div class="form-group">
                 <label for="nome" data-i18n="name">Name *</label>
                 <input type="text" id="nome" name="nome" required>
             </div>
-
+        
             <div class="form-group">
                 <label for="cognome" data-i18n="surname">Surname *</label>
                 <input type="text" id="cognome" name="cognome" required>
             </div>
-
+        
             <div class="form-group">
                 <label for="email" data-i18n="email">Email *</label>
                 <input type="email" id="email" name="email" required>
             </div>
-
+        
             <div class="form-group">
                 <label for="telefono" data-i18n="phone">Phone Number *</label>
                 <input type="tel" id="telefono" name="telefono" required>
             </div>
-
+        
             <div class="form-group">
                 <label for="workshop-selection" data-i18n="workshop">Select Workshop *</label>
                 <select id="workshop-selection" name="workshop" required>
-                    <option value="">Select a workshop</option>
-                    <option value="senegal">Workshop Senegal</option>
-                    <option value="mexico">Workshop Mexico</option>
-                    <option value="cuba">Workshop Cuba</option>
+                    <option value="">Seleziona un workshop</option>
+                    <option value="workshop1">Workshop Senegal </option>
+                    <option value="workshop2">Workshop Mexico </option>
+                    <option value="workshop3">Workshop Cuba</option>
+                    <option value="workshop1">Workshop Mordancage </option>
+                    <option value="workshop2">Workshop Lith </option>
+                    <option value="workshop3">Workshop Cyanotype</option>
                 </select>
             </div>
-
+        
             <div class="form-group">
                 <label for="messaggio" data-i18n="message">Message</label>
                 <textarea id="messaggio" name="messaggio"></textarea>
             </div>
-
+        
             <input type="hidden" name="_next" value="grazie.html">
             <input type="hidden" name="_captcha" value="false">
-
+        
             <button type="submit" class="submit-button" data-i18n="send_registration">Send Registration</button>
         </form>
     </div>

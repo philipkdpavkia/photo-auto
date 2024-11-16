@@ -645,113 +645,115 @@ html {
         font-size: 0.7rem;
         padding: 0.2rem 0.4rem;
     }
-}
+    
+
     /* Registration Page Styles */
-    .registration-page {
-        background: var(--background);
-        min-height: 100vh;
-    }
-    
+.registration-page {
+    background: var(--background);
+    min-height: 100vh;
+}
+
+.registration-page .form-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 120px 2rem 4rem;
+}
+
+.registration-page .workshop-header {
+    margin-bottom: 4rem;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    backdrop-filter: blur(10px);
+}
+
+.registration-page .workshop-title {
+    font-size: 2.5rem;
+    color: var(--accent);
+    margin-bottom: 1rem;
+    font-weight: 300;
+}
+
+.registration-page .workshop-details {
+    color: var(--primary);
+    font-size: 1.1rem;
+    opacity: 0.8;
+}
+
+.registration-page .registration-form {
+    display: grid;
+    gap: 2rem;
+}
+
+.registration-page .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.registration-page label {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    color: var(--accent);
+    font-weight: 700;
+}
+
+.registration-page input,
+.registration-page textarea,
+.registration-page select {
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    color: var(--primary);
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1rem;
+    transition: var(--transition);
+}
+
+.registration-page input:focus,
+.registration-page textarea:focus,
+.registration-page select:focus {
+    outline: none;
+    border-color: var(--accent);
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.registration-page textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+.registration-page .submit-button {
+    justify-self: start;
+    padding: 1rem 2rem;
+    background: var(--accent);
+    color: #000;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.registration-page .submit-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 2px 8px rgba(255, 51, 102, 0.4);
+    background: #ff1f57;
+}
+
+@media (max-width: 768px) {
     .registration-page .form-container {
-        max-width: 800px;
-        margin: 0 auto;
-        padding: 120px 2rem 4rem;
+        padding: 100px 1rem 2rem;
     }
-    
-    .registration-page .workshop-header {
-        margin-bottom: 4rem;
-        padding: 2rem;
-        background: rgba(255, 255, 255, 0.05);
-        border-radius: 8px;
-        backdrop-filter: blur(10px);
-    }
-    
+
     .registration-page .workshop-title {
-        font-size: 2.5rem;
-        color: var(--accent);
-        margin-bottom: 1rem;
-        font-weight: 300;
+        font-size: 2rem;
     }
-    
+
     .registration-page .workshop-details {
-        color: var(--primary);
-        font-size: 1.1rem;
-        opacity: 0.8;
-    }
-    
-    .registration-page .registration-form {
-        display: grid;
-        gap: 2rem;
-    }
-    
-    .registration-page .form-group {
-        display: flex;
-        flex-direction: column;
-        gap: 0.5rem;
-    }
-    
-    .registration-page label {
-        font-size: 0.9rem;
-        text-transform: uppercase;
-        color: var(--accent);
-        font-weight: 700;
-    }
-    
-    .registration-page input,
-    .registration-page textarea,
-    .registration-page select {
-        padding: 1rem;
-        background: rgba(255, 255, 255, 0.05);
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        border-radius: 4px;
-        color: var(--primary);
-        font-family: 'Space Grotesk', sans-serif;
         font-size: 1rem;
-        transition: var(--transition);
     }
-    
-    .registration-page input:focus,
-    .registration-page textarea:focus,
-    .registration-page select:focus {
-        outline: none;
-        border-color: var(--accent);
-        background: rgba(255, 255, 255, 0.08);
-    }
-    
-    .registration-page textarea {
-        min-height: 150px;
-        resize: vertical;
-    }
-    
-    .registration-page .submit-button {
-        justify-self: start;
-        padding: 1rem 2rem;
-        background: var(--accent);
-        color: #000;
-        border: none;
-        border-radius: 4px;
-        font-size: 1rem;
-        font-weight: 700;
-        cursor: pointer;
-        transition: var(--transition);
-    }
-    
-    .registration-page .submit-button:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 2px 8px rgba(255, 51, 102, 0.4);
-        background: #ff1f57;
-    }
-    
-    @media (max-width: 768px) {
-        .registration-page .form-container {
-            padding: 100px 1rem 2rem;
-        }
-    
-        .registration-page .workshop-title {
-            font-size: 2rem;
-        }
-    
-        .registration-page .workshop-details {
-            font-size: 1rem;
-        }
-    }
+}
+}

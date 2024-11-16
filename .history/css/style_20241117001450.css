@@ -781,87 +781,34 @@ html {
         }
     }
 
-    /* FAQ Section Base */
-.faq-section {
+    .faq-section {
+        padding: 4rem 2rem 2rem 2rem;
+        background: var(--background);
+        color: var(--primary);
+    }
     
-    margin-top: 80px;
-    padding: 2rem;
-    background: var(--background);
-    color: var(--primary);
-    width: 100%;
-}
-
-/* FAQ Title */
-.section-title {
-    font-size: 2.5rem;
-    margin-bottom: 3rem;
-    padding-top: 2rem;
-}
-
-/* FAQ Items Container */
-.faq-container {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 0 1rem;
-}
-
-/* FAQ Items */
-.faq-item {
-    margin-bottom: 3rem;
-    padding: 0 1rem;
-}
-
-.faq-item .title {
-    font-size: 1.5rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
-    color: var(--accent);
-    line-height: 1.3;
-}
-
-.faq-item .content {
-    font-size: 1.1rem;
-    line-height: 1.6;
-    color: var(--secondary);
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .section-title {
-        font-size: 2rem;
-        padding-top: 1rem;
+    .faq-item {
         margin-bottom: 2rem;
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
     }
-
+    
     .faq-item .title {
-        font-size: 1.3rem;
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+        color: var(--accent);
     }
-
+    
     .faq-item .content {
         font-size: 1rem;
+        line-height: 1.6;
+        color: var(--secondary);
     }
-
-    .faq-section {
-        padding: 1rem;
+    
+    /* Section spacing */
+    .section-separator {
+        padding-top: 80px;
+        margin-top: -80px;
     }
-
-    .faq-container {
-        padding: 0 0.5rem;
-    }
-
-    main {
-        padding-top: 60px;
-    }
-}
-
-/* Extra small devices */
-@media (max-width: 480px) {
-    .section-title {
-        font-size: 1.8rem;
-    }
-
-    .faq-item {
-        padding: 0 0.5rem;
-        margin-bottom: 2rem;
-    }
-}

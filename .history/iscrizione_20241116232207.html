@@ -255,7 +255,16 @@
             </div>
 
             <!-- reCAPTCHA -->
-            <div class="g-recaptcha" data-sitekey="6LdTN4EqAAAAANEkwNrAfw7F_ATbwErrxswXLIev"> </div> <input type="hidden" name="_next" value="grazie.html"> <button type="submit" class="submit-button" data-i18n="send_registration">Send Registration</button>
+            <div class="g-recaptcha" 
+                 data-sitekey="6LdTN4EqAAAAANEkwNrAfw7F_ATbwErrxswXLIev"></div>
+
+            <input type="hidden" name="_next" value="grazie.html">
+            <!-- CSRF Protection -->
+            <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+
+            <button type="submit" 
+                    class="submit-button" 
+                    data-i18n="send_registration">Send Registration</button>
         </form>
     </div>
 

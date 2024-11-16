@@ -783,8 +783,6 @@ html {
 
     /* FAQ Section Base */
 .faq-section {
-    
-    margin-top: 80px;
     padding: 2rem;
     background: var(--background);
     color: var(--primary);

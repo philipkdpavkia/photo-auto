@@ -5,8 +5,8 @@
   <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
   <meta content="Workshop fotografici pratici e dinamici: Cuba, Senegal, Messico. Niente teoria infinita, solo fotografia sul campo con Francesco Pavia" name="description"/>
   <meta content="photography workshop, travel photography, francesco pavia, cuba workshop, senegal photography, mexico photography, street photography" name="keywords"/>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" media="all" />
-  <link href="/css/style.css" rel="stylesheet" media="screen"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" media="all" rel="stylesheet"/>
+  <link href="/css/style.css" media="screen" rel="stylesheet"/>
   <link as="style" href="/css/all.min.css" rel="preload"/>
   <link as="font" crossorigin="" href="/fonts/SpaceGrotesk-Bold.woff2" rel="preload"/>
   <link as="font" crossorigin="" href="/fonts/SpaceGrotesk-Light.woff2" rel="preload"/>
@@ -16,33 +16,37 @@
  </head>
  <body>
   <header class="header">
-    <nav class="nav">
-        <a class="logo" href="#">
-            FP PHOTO WORKSHOP
-        </a>
-        <button class="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
-        <button class="lang-switch" id="langSwitch" onclick="switchLanguage()">
-            EN
-        </button>
-        <div class="nav-links">
-            <a data-i18n="menu.gallery" href="#gallery">Gallery</a>
-            <a data-i18n="menu.about" href="#about">Metodo</a>
-            <a data-i18n="menu.contact" href="#contact">Contact</a>
-            <a class="instagram-link" href="https://instagram.com/fpphotoworkshop" target="_blank">
-                <i class="fab fa-instagram"></i>
-            </a>
-        </div>
-    </nav>
+   <nav class="nav">
+    <a class="logo" href="#">
+     FP PHOTO WORKSHOP
+    </a>
+    <button class="lang-switch" id="langSwitch" onclick="switchLanguage()">
+     EN
+    </button>
+    <div class="nav-links">
+     <a data-i18n="menu.gallery" href="#gallery">
+      Gallery
+     </a>
+     <a data-i18n="menu.about" href="#about">
+      Metodo
+     </a>
+     <a data-i18n="menu.contact" href="#contact">
+      Contact
+     </a>
+     <a class="instagram-link" href="https://instagram.com/fpphotoworkshop" target="_blank">
+        Seguici su Instagram
+        <img src="instagram-icon.png" alt="Icona di Instagram">
+      </a>
+      <i class="fab fa-instagram">
+      </i>
+     </a>
+    </div>
+   </nav>
   </header>
   <main>
    <section class="hero">
     <a class="workshop-link" href="wdcuba.html">
-     <img alt="Havana Life" src="/images/cuba/cub-20.webp
-     "/>
+     <img alt="Havana Life" src="/images/cuba/cub-2.webp"/>
      <div class="workshop-text">
       <h2 data-i18n="hero.havana.title">
        Vita all'Havana
@@ -53,7 +57,7 @@
      </div>
     </a>
     <a class="workshop-link" href="wdsenegal.html">
-     <img alt="Senegal Adventures" src="/images/senegal/sen-9.webp"/>
+     <img alt="Senegal Adventures" src="/images/senegal/sen-14.webp"/>
      <div class="workshop-text">
       <h2 data-i18n="hero.senegal.title">
        Senegal Adventures
@@ -64,7 +68,7 @@
      </div>
     </a>
     <a class="workshop-link" href="wdmexico.html">
-     <img alt="Dia de Muertos" src="/images/mexico/mex-8.webp"/>
+     <img alt="Dia de Muertos" src="/images/mexico/mex-26.webp"/>
      <div class="workshop-text">
       <h2 data-i18n="hero.mexico.title">
        Dia de Muertos
@@ -80,13 +84,13 @@
    </h1>
    <section class="gallery">
     <div class="gallery-item">
-     <img alt="Gallery Image - blog-100.webp" src="/images/blog-100.webp"/>
+     <img alt="Gallery Image - blog-52.webp" src="/images/blog-52.webp"/>
     </div>
     <div class="gallery-item">
-     <img alt="Gallery Image - blog-65.webp" src="/images/blog-65.webp"/>
+     <img alt="Gallery Image - blog-31.webp" src="/images/blog-31.webp"/>
     </div>
     <div class="gallery-item">
-     <img alt="Gallery Image - blog-64.webp" src="/images/blog-64.webp"/>
+     <img alt="Gallery Image - blog-35.webp" src="/images/blog-35.webp"/>
     </div>
    </section>
    <section class="about" id="about">
@@ -163,7 +167,9 @@
   </main>
   <script src="/language.js">
   </script>
-  <script src="/schema.json" type="application/ld+json"></script>
-  <script src="/script.js" defer></script>
+  <script src="/schema.json" type="application/ld+json">
+  </script>
+  <script defer="" src="/script.js">
+  </script>
  </body>
 </html>

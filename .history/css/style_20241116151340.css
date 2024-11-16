@@ -313,6 +313,7 @@ html {
     transition: var(--transition);
 }
 
+/* Gallery */
 .gallery-item:hover {
     transform: translateY(-5px);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
@@ -331,16 +332,33 @@ html {
 
 /* About Section */
 .about {
-    padding: 4rem 2rem;
+    padding: 8rem 2rem 4rem; /* Aumentato il padding top */
     max-width: 1200px;
     margin: 0 auto;
 }
 
-.about h2 {
+/* Nuovo stile separatore per about */
+.about .separator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.about .separator .line {
+    height: 1px;
+    width: 100px;
+    background: var(--accent);
+    opacity: 0.5;
+}
+
+.about .separator .section-title {
+    margin: 0;
+    padding: 0;
+    white-space: nowrap;
     font-size: 2rem;
     font-weight: normal;
-    margin-bottom: 2rem;
-    text-transform: uppercase;
     color: var(--accent);
 }
 
@@ -436,13 +454,14 @@ html {
     text-decoration: none;
     transform: translateX(5px);
 }
+
 /* Workshop Button */
 .workshop-button {
     display: inline-block;
     width: 100%;
     padding: 0.5rem 1rem;
     background: var(--accent);
-    color: var(--primary);
+    color: #000000;
     border: none;
     border-radius: 4px;
     cursor: pointer;
@@ -451,7 +470,6 @@ html {
     text-align: center;
     text-decoration: none;
     transition: var(--transition);
-    color: #000000;
 }
 
 .workshop-button:hover {
@@ -460,26 +478,11 @@ html {
     background: #ff1f57;
 }
 
-/* Media Queries */
-/* Breakpoint per tablet e schermi medi (tra 721px e 1024px) */
-@media screen and (min-width: 721px) and (max-width: 1024px) {
-    .nav-links {
-        gap: 1.5rem; /* Ridotto lo spazio tra i link */
-    }
-
-    .instagram-link {
-        margin-right: 4rem; /* Spazio a destra per il language switcher */
-    }
-
-    .lang-switch {
-        right: 1rem;
-        top: 1rem;
-    }
-
-    .nav {
-        padding-right: 5rem; /* Spazio extra a destra per evitare sovrapposizioni */
-    }
+/* Offset per l'ancoraggio smooth */
+html {
+    scroll-padding-top: 120px; /* Aumentato per migliore scroll */
 }
+
 /* Media Queries */
 @media screen and (min-width: 721px) and (max-width: 1024px) {
     .nav-links {
@@ -496,7 +499,6 @@ html {
 }
 
 @media screen and (max-width: 720px) {
-    /* Layout di navigazione */
     .nav {
         display: flex;
         align-items: center;
@@ -509,7 +511,6 @@ html {
         z-index: 1002;
     }
 
-    /* Hamburger Menu */
     .hamburger {
         display: flex;
         flex-direction: column;
@@ -543,7 +544,6 @@ html {
         transform: translateY(-8px) rotate(-45deg);
     }
 
-    /* Menu Mobile */
     .nav-links {
         position: fixed;
         top: 0;
@@ -571,7 +571,6 @@ html {
         padding: 1rem 2rem;
     }
 
-    /* Language Switcher Mobile */
     .lang-switch {
         position: fixed;
         top: 1rem;
@@ -581,7 +580,6 @@ html {
         z-index: 1002;
     }
 
-    /* Contenuto principale Mobile */
     .section-title {
         font-size: 2.5rem;
     }
@@ -602,8 +600,11 @@ html {
         font-size: 1rem;
     }
 
-    .about h2,
-    .contact h2 {
+    .about {
+        padding: 6rem 1rem 2rem; /* Padding adattato per mobile */
+    }
+
+    .about .separator .section-title {
         font-size: 1.5rem;
     }
 
@@ -614,11 +615,6 @@ html {
     .philosophy h3,
     .contact-section h3 {
         font-size: 1.2rem;
-    }
-
-    .about,
-    .contact {
-        padding: 2rem 1rem;
     }
 
     .philosophy,

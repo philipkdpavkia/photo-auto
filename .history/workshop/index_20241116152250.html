@@ -42,6 +42,7 @@
             width: 100%;
             height: 300px;
             overflow: hidden;
+            position: relative;
         }
 
         .workshop-image img {
@@ -65,15 +66,10 @@
             font-size: 1.8rem;
         }
 
-        .workshop-details p {
-            margin-bottom: 1rem;
-            opacity: 0.9;
-        }
-
         .workshop-meta {
             display: flex;
             gap: 1rem;
-            margin-bottom: 1rem;
+            margin: 1rem 0;
             font-size: 0.9rem;
             opacity: 0.8;
         }
@@ -84,13 +80,9 @@
             gap: 0.5rem;
         }
 
-        .workshop-button {
-            margin-top: 1rem;
-        }
-
         .page-intro {
             text-align: center;
-            padding: 4rem 2rem 2rem;
+            padding: 8rem 2rem 2rem;
             max-width: 800px;
             margin: 0 auto;
         }
@@ -107,6 +99,17 @@
             line-height: 1.6;
         }
 
+        .price-tag {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: var(--accent);
+            color: #000;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+
         @media (max-width: 768px) {
             .workshops-grid {
                 grid-template-columns: 1fr;
@@ -114,7 +117,7 @@
             }
 
             .page-intro {
-                padding: 4rem 1rem 1rem;
+                padding: 6rem 1rem 1rem;
             }
 
             .page-intro h1 {
@@ -139,7 +142,7 @@
             <button class="lang-switch" id="langSwitch" onclick="switchLanguage()">IT</button>
             <div class="nav-links">
                 <a href="/#gallery">Gallery</a>
-                <a href="/workshops" class="active">Workshops</a>
+                <a href="/workshop" class="active">Workshops</a>
                 <a href="/#about">About</a>
                 <a href="/#contact">Contact</a>
                 <a class="instagram-link" href="https://instagram.com/fpphotoworkshop" target="_blank" rel="noopener">
@@ -151,25 +154,25 @@
 
     <main>
         <section class="page-intro">
-            <h1>Photography Workshops</h1>
-            <p>Immersive photography experiences in unique locations. Small groups, hands-on practice, and authentic cultural encounters. Choose your next photographic adventure.</p>
+            <h1 data-i18n="workshop_page.title">Photography Workshops</h1>
+            <p data-i18n="workshop_page.subtitle">Immersive photography experiences in unique locations. Small groups, hands-on practice, and authentic cultural encounters. Choose your next photographic adventure.</p>
         </section>
 
         <div class="workshops-grid">
             <!-- Cuba Workshop -->
             <article class="workshop-card">
                 <div class="workshop-image">
-                    <img src="/images/cuba/cub-20.webp" alt="Street Photography in Havana - Documentary workshop"/>
+                    <img src="/images/cuba/cub-20.webp" alt="Street Photography in Havana"/>
+                    <div class="price-tag" data-i18n="workshops.cuba.price_value">€2,000</div>
                 </div>
                 <div class="workshop-details">
-                    <h2>Life in Havana</h2>
+                    <h2 data-i18n="workshops.cuba.title">Havana City Life</h2>
                     <div class="workshop-meta">
-                        <span><i class="far fa-calendar"></i> 7 days</span>
-                        <span><i class="far fa-users"></i> Max 8 people</span>
+                        <span><i class="far fa-calendar"></i> <span data-i18n="workshops.cuba.duration_value">8 days</span></span>
+                        <span><i class="far fa-users"></i> <span data-i18n="workshops.cuba.spots_value">6/8</span></span>
                     </div>
-                    <p>Capture the vibrant street life of Cuba's capital. From early morning markets to late-night music venues, immerse yourself in the unique atmosphere of Havana.</p>
-                    <p>Next dates: March & November 2024</p>
-                    <a href="/wdcuba.html" class="workshop-button">Workshop Details</a>
+                    <p data-i18n="workshops.cuba.dates_value">March 12-19, 2025</p>
+                    <a href="/workshop/cuba.html" class="workshop-button" data-i18n="workshops.cuba.book">Book Now</a>
                 </div>
             </article>
 
@@ -177,16 +180,16 @@
             <article class="workshop-card">
                 <div class="workshop-image">
                     <img src="/images/senegal/sen-9.webp" alt="Photography Workshop in Senegal"/>
+                    <div class="price-tag" data-i18n="workshops.senegal.price_value">€2,000</div>
                 </div>
                 <div class="workshop-details">
-                    <h2>Senegal Adventures</h2>
+                    <h2 data-i18n="workshops.senegal.title">Senegal Adventures</h2>
                     <div class="workshop-meta">
-                        <span><i class="far fa-calendar"></i> 8 days</span>
-                        <span><i class="far fa-users"></i> Max 8 people</span>
+                        <span><i class="far fa-calendar"></i> <span data-i18n="workshops.senegal.duration_value">8 days</span></span>
+                        <span><i class="far fa-users"></i> <span data-i18n="workshops.senegal.spots_value">6/8</span></span>
                     </div>
-                    <p>Experience the colors and culture of West Africa. From bustling markets to peaceful fishing villages, discover the authentic soul of Senegal.</p>
-                    <p>Next dates: January & October 2024</p>
-                    <a href="/wdsenegal.html" class="workshop-button">Workshop Details</a>
+                    <p data-i18n="workshops.senegal.dates_value">December 12-19, 2025</p>
+                    <a href="/workshop/senegal.html" class="workshop-button" data-i18n="workshops.senegal.book">Book Now</a>
                 </div>
             </article>
 
@@ -194,16 +197,16 @@
             <article class="workshop-card">
                 <div class="workshop-image">
                     <img src="/images/mexico/mex-8.webp" alt="Day of the Dead Photography Workshop"/>
+                    <div class="price-tag" data-i18n="workshops.mexico.price_value">€2,500</div>
                 </div>
                 <div class="workshop-details">
-                    <h2>Dia de Muertos</h2>
+                    <h2 data-i18n="workshops.mexico.title">Day of the Dead</h2>
                     <div class="workshop-meta">
-                        <span><i class="far fa-calendar"></i> 6 days</span>
-                        <span><i class="far fa-users"></i> Max 8 people</span>
+                        <span><i class="far fa-calendar"></i> <span data-i18n="workshops.mexico.duration_value">8 days</span></span>
+                        <span><i class="far fa-users"></i> <span data-i18n="workshops.mexico.spots_value">6/8</span></span>
                     </div>
-                    <p>Document one of Mexico's most significant cultural celebrations in the mountains of Oaxaca. Traditional ceremonies, street photography, and authentic encounters.</p>
-                    <p>Next dates: October 2024</p>
-                    <a href="/wdmexico.html" class="workshop-button">Workshop Details</a>
+                    <p data-i18n="workshops.mexico.dates_value">October 27 - November 3, 2025</p>
+                    <a href="/workshop/mexico.html" class="workshop-button" data-i18n="workshops.mexico.book">Book Now</a>
                 </div>
             </article>
         </div>

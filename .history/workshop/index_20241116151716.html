@@ -1,0 +1,158 @@
+import React, { useState } from 'react';
+
+const translations = {
+  it: {
+    menu: {
+      gallery: "Galleria",
+      about: "Metodo",
+      contact: "Contatti"
+    },
+    pageIntro: {
+      title: "Workshop Fotografici",
+      description: "Esperienze fotografiche immersive in luoghi unici. Piccoli gruppi, pratica sul campo e incontri culturali autentici. Scegli la tua prossima avventura fotografica."
+    }
+  },
+  en: {
+    menu: {
+      gallery: "Gallery",
+      about: "Method",
+      contact: "Contact"
+    },
+    pageIntro: {
+      title: "Photography Workshops",
+      description: "Immersive photography experiences in unique locations. Small groups, hands-on practice, and authentic cultural encounters. Choose your next photographic adventure."
+    }
+  }
+};
+
+const workshopData = {
+  it: {
+    cuba: {
+      title: "Vita all'Havana",
+      duration: "7 giorni",
+      maxPeople: "Max 8 persone",
+      description: "Cattura la vita vibrante delle strade della capitale cubana. Dai mercati mattutini ai locali notturni, immergiti nell'atmosfera unica dell'Havana.",
+      dates: "Prossime date: Marzo e Novembre 2024",
+      buttonText: "Dettagli Workshop"
+    },
+    senegal: {
+      title: "Avventure in Senegal",
+      duration: "8 giorni",
+      maxPeople: "Max 8 persone",
+      description: "Vivi i colori e la cultura dell'Africa occidentale. Dai mercati vivaci ai tranquilli villaggi di pescatori, scopri l'anima autentica del Senegal.",
+      dates: "Prossime date: Gennaio e Ottobre 2024",
+      buttonText: "Dettagli Workshop"
+    },
+    mexico: {
+      title: "Dia de Muertos",
+      duration: "6 giorni",
+      maxPeople: "Max 8 persone",
+      description: "Documenta una delle celebrazioni culturali più significative del Messico sulle montagne di Oaxaca. Cerimonie tradizionali, fotografia di strada e incontri autentici.",
+      dates: "Prossime date: Ottobre 2024",
+      buttonText: "Dettagli Workshop"
+    }
+  },
+  en: {
+    cuba: {
+      title: "Life in Havana",
+      duration: "7 days",
+      maxPeople: "Max 8 people",
+      description: "Capture the vibrant street life of Cuba's capital. From early morning markets to late-night music venues, immerse yourself in the unique atmosphere of Havana.",
+      dates: "Next dates: March & November 2024",
+      buttonText: "Workshop Details"
+    },
+    senegal: {
+      title: "Senegal Adventures",
+      duration: "8 days",
+      maxPeople: "Max 8 people",
+      description: "Experience the colors and culture of West Africa. From bustling markets to peaceful fishing villages, discover the authentic soul of Senegal.",
+      dates: "Next dates: January & October 2024",
+      buttonText: "Workshop Details"
+    },
+    mexico: {
+      title: "Day of the Dead",
+      duration: "6 days",
+      maxPeople: "Max 8 people",
+      description: "Document one of Mexico's most significant cultural celebrations in the mountains of Oaxaca. Traditional ceremonies, street photography, and authentic encounters.",
+      dates: "Next dates: October 2024",
+      buttonText: "Workshop Details"
+    }
+  }
+};
+
+const WorkshopsPage = () => {
+  const [language, setLanguage] = useState('en');
+
+  const toggleLanguage = () => {
+    setLanguage(prev => prev === 'en' ? 'it' : 'en');
+  };
+
+  const t = translations[language];
+  const workshops = workshopData[language];
+
+  return (
+    <div className="min-h-screen bg-black text-white">
+      <header className="fixed top-0 left-0 right-0 bg-black/95 backdrop-blur-lg z-50 border-b border-white/10">
+        <nav className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+          <a href="/" className="text-lg font-bold hover:text-red-500 transition-colors">
+            FP PHOTO WORKSHOP
+          </a>
+          <div className="flex items-center gap-8">
+            <a href="/#gallery" className="uppercase hover:text-red-500 transition-colors">{t.menu.gallery}</a>
+            <a href="/workshops" className="uppercase text-red-500">{t.menu.about}</a>
+            <a href="/#about" className="uppercase hover:text-red-500 transition-colors">{t.menu.about}</a>
+            <a href="/#contact" className="uppercase hover:text-red-500 transition-colors">{t.menu.contact}</a>
+            <button
+              onClick={toggleLanguage}
+              className="px-4 py-2 bg-red-500 text-black font-bold rounded hover:-translate-y-0.5 transition-transform"
+            >
+              {language === 'en' ? 'IT' : 'EN'}
+            </button>
+          </div>
+        </nav>
+      </header>
+
+      <main className="pt-24">
+        <section className="text-center px-4 py-16 max-w-2xl mx-auto">
+          <h1 className="text-4xl md:text-5xl text-red-500 mb-4">{t.pageIntro.title}</h1>
+          <p className="text-lg opacity-90">{t.pageIntro.description}</p>
+        </section>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-8 max-w-7xl mx-auto">
+          {Object.entries(workshops).map(([key, workshop]) => (
+            <article key={key} className="bg-white/5 rounded-lg overflow-hidden group hover:-translate-y-1 transition-transform">
+              <div className="h-72 overflow-hidden">
+                <img 
+                  src={`/images/${key}/${key === 'cuba' ? 'cub-20' : key === 'senegal' ? 'sen-9' : 'mex-8'}.webp`}
+                  alt={workshop.title}
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                />
+              </div>
+              <div className="p-6">
+                <h2 className="text-2xl text-red-500 mb-4">{workshop.title}</h2>
+                <div className="flex gap-4 text-sm opacity-80 mb-4">
+                  <span className="flex items-center gap-2">
+                    <i className="far fa-calendar"></i> {workshop.duration}
+                  </span>
+                  <span className="flex items-center gap-2">
+                    <i className="far fa-users"></i> {workshop.maxPeople}
+                  </span>
+                </div>
+                <p className="mb-4 opacity-90">{workshop.description}</p>
+                <p className="mb-4">{workshop.dates}</p>
+                <a 
+                  href={`/wd${key}.html`}
+                  className="block w-full text-center py-2 bg-red-500 text-black font-bold rounded hover:bg-red-600 transition-colors"
+                >
+                  {workshop.buttonText}
+                </a>
+              </div>
+            </article>
+          ))}
+        </div>
+      </main>
+    </div>
+  );
+};
+
+export default WorkshopsPage;

@@ -74,3 +74,6 @@ document.addEventListener('DOMContentLoaded', () => {
     loadTranslations();
     updateLangButton();
 });
+
+// Aggiungi l'event listener al bottone
+document.getElementById('langSwitch').addEventListener('click', switchLanguage);

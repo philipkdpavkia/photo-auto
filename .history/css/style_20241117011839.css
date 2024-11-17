@@ -62,16 +62,6 @@ body {
     max-width: 1400px;
     margin: 0 auto;
 }
-.menu-item {
-    cursor: pointer;
-    text-decoration: none;
-    color: var(--primary);
-    transition: var(--transition);
-}
-
-.menu-item:hover {
-    color: var(--accent);
-}
 
 .logo {
     font-weight: 700;

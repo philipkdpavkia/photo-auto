@@ -39,7 +39,7 @@
                     },
                     "cuba": {
                         "title": "Havana City Life",
-                        "details": "Photography workshop in Cuba • 8 days • March 12-19, 2025 • €2,000"
+                        "details": "Photography workshop in Cuba • 10 days • March 12-19, 2025 • €2,000"
                     }
                 },
                 "registration_prefix": "Registration: "
@@ -60,11 +60,11 @@
                     },
                     "mexico": {
                         "title": "Dia de Muertos",
-                        "details": "Workshop fotografico in Messico • 8 giorni • 26 Ottobre - 3 Novembre 2025 • €2.000"
+                        "details": "Workshop fotografico in Messico • 10 giorni • 26 Ottobre - 3 Novembre 2025 • €2.000"
                     },
                     "cuba": {
                         "title": "Havana City Life",
-                        "details": "Workshop fotografico a Cuba • 8 giorni • 12-19 Marzo 2025 • €2.000"
+                        "details": "Workshop fotografico a Cuba • 10 giorni • 12-19 Marzo 2025 • €2.000"
                     }
                 },
                 "registration_prefix": "Iscrizione: "
@@ -171,10 +171,7 @@
     <nav class="nav">
         <div class="logo" onclick="window.location.href='/'">FRANCESCO PAVIA</div>
         <div class="menu">
-            <a href="#" 
-               class="menu-item" 
-               onclick="window.history.back(); return false;" 
-               data-i18n="back">BACK</a>
+            <div class="menu-item" onclick="history.back()" data-i18n="back">BACK</div>
         </div>
     </nav>
 
@@ -256,6 +253,10 @@
                          name="messaggio"
                          maxlength="1000"></textarea>
             </div>
+
+            <!-- reCAPTCHA -->
+            <div class="g-recaptcha" data-sitekey="6LdTN4EqAAAAANEkwNrAfw7F_ATbwErrxswXLIev"></div>
+
 <input type="hidden" name="_next" value="grazie.html">
 
 <button type="submit" 

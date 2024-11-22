@@ -6,6 +6,37 @@
       "contact": "Contatti",
       "back": "Indietro"
     },
+    "faq": {
+      "title": "Domande Frequenti",
+      "gear": {
+        "question": "Che attrezzatura fotografica devo portare?",
+        "answer": "Porta il tuo corpo macchina e una gamma versatile di obiettivi. Si consiglia uno zoom standard (24-70mm) e un obiettivo da ritratto (85mm o simile). Non dimenticare batterie extra, schede di memoria e un laptop per le sessioni di editing."
+      },
+      "beginners": {
+        "question": "Il workshop è adatto ai principianti?",
+        "answer": "Sì! Il workshop è progettato per fotografi di tutti i livelli. Forniremo una guida personalizzata in base alla tua esperienza."
+      },
+      "price": {
+        "question": "Cosa è incluso nel prezzo?",
+        "answer": "Il prezzo include alloggio, trasporti locali, sessioni di workshop e guida fotografica. I voli non sono inclusi."
+      },
+      "booking": {
+        "question": "Come prenoto il mio posto?",
+        "answer": "È richiesto un deposito del 30% per confermare la prenotazione. Il saldo rimanente è dovuto 60 giorni prima dell'inizio del workshop."
+      },
+      "accommodation": {
+        "question": "Come sono gli alloggi?",
+        "answer": "Soggiorneremo in guest house e hotel locali accuratamente selezionati che offrono comfort mantenendo un'autentica connessione con la cultura locale."
+      },
+      "visa": {
+        "question": "Ho bisogno di un visto per Senegal, Messico e Cuba?",
+        "answer": "I requisiti per il visto variano in base alla tua nazionalità. Forniremo informazioni dettagliate sui requisiti del visto dopo la prenotazione."
+      },
+      "meals": {
+        "question": "E per i pasti?",
+        "answer": "I pasti sono a tuo carico, dandoti la flessibilità di esplorare la cucina locale."
+      }
+    },
     "hero": {
       "havana": {
         "title": "Vita all'Havana",
@@ -107,6 +138,44 @@
       "contact": "Contact",
       "back": "Back"
     },
+    "en": {
+    "menu": {
+      "gallery": "Gallery",
+      "about": "Method",
+      "contact": "Contact",
+      "back": "Back"
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "gear": {
+        "question": "What camera gear should I bring?",
+        "answer": "Bring your camera body and a versatile range of lenses. A standard zoom (24-70mm) and a portrait lens (85mm or similar) are recommended. Don't forget extra batteries, memory cards, and a laptop for editing sessions."
+      },
+      "beginners": {
+        "question": "Is this workshop suitable for beginners?",
+        "answer": "Yes! The workshop is designed for photographers of all skill levels. We'll provide personalized guidance based on your experience."
+      },
+      "price": {
+        "question": "What's included in the price?",
+        "answer": "The price includes accommodation, local transportation, workshop sessions, and photography guidance. Flights are not included."
+      },
+      "booking": {
+        "question": "How do I reserve my spot?",
+        "answer": "A 30% deposit is required to secure your booking. The remaining balance is due 60 days before the workshop starts."
+      },
+      "accommodation": {
+        "question": "What's the accommodation like?",
+        "answer": "We stay in carefully selected local guesthouses and hotels that offer comfort while maintaining an authentic connection to local culture."
+      },
+      "visa": {
+        "question": "Do I need a visa for Senegal, Mexico and Cuba?",
+        "answer": "Visa requirements vary by your nationality. We'll provide detailed information about visa requirements after booking."
+      },
+      "meals": {
+        "question": "What about meals?",
+        "answer": "Meals are at your own expense, giving you the flexibility to explore local cuisine."
+      }
+    },
     "hero": {
       "havana": {
         "title": "Havana Life",
@@ -201,4 +270,5 @@
       }
     }
   }
+}
 }

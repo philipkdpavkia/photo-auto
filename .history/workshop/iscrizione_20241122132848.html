@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workshop registration - Francesco Pavia</title>
+    <!-- Security Headers -->
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+    
+    <link href="/css/style.css" rel="stylesheet" media="screen"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" media="all"/>
+    
+    <!-- reCAPTCHA -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    
+    <!-- Script traduzioni -->
+    <script>
+        const translations = {
+            en: {
+                "back": "BACK",
+                "workshop_registration": "Workshop registration",
+                "name": "Name *",
+                "surname": "Surname *",
+                "email": "Email *",
+                "phone": "Phone Number *",
+                "message": "Message",
+                "send_registration": "Send Registration",
+                "workshop_details": {
+                    "senegal": {
+                        "title": "Senegal Adventures",
+                        "details": "Photography workshop in Senegal • 8 days • December 12-19, 2025 • €2,000"
+                    },
+                    "mexico": {
+                        "title": "Dia de Muertos",
+                        "details": "Photography workshop in Mexico • 8 days • October 27 - November 3, 2024 • €2,000"
+                    },
+                    "cuba": {
+                        "title": "Havana City Life",
+                        "details": "Photography workshop in Cuba • 8 days • March 12-19, 2025 • €2,000"
+                    }
+                },
+                "registration_prefix": "Registration: "
+            },
+            it: {
+                "back": "INDIETRO",
+                "workshop_registration": "Iscrizione Workshop",
+                "name": "Nome *",
+                "surname": "Cognome *",
+                "email": "Email *",
+                "phone": "Telefono *",
+                "message": "Messaggio",
+                "send_registration": "Invia Iscrizione",
+                "workshop_details": {
+                    "senegal": {
+                        "title": "Senegal Adventures",
+                        "details": "Workshop fotografico in Senegal • 8 giorni • 12-19 Dicembre 2025 • €2.000"
+                    },
+                    "mexico": {
+                        "title": "Dia de Muertos",
+                        "details": "Workshop fotografico in Messico • 8 giorni • 26 Ottobre - 3 Novembre 2025 • €2.000"
+                    },
+                    "cuba": {
+                        "title": "Havana City Life",
+                        "details": "Workshop fotografico a Cuba • 8 giorni • 12-19 Marzo 2025 • €2.000"
+                    }
+                },
+                "registration_prefix": "Iscrizione: "
+            }
+        };
+
+        class LanguageManager {
+            constructor() {
+                this.currentLang = localStorage.getItem('userLanguage') || 'en';
+                document.documentElement.lang = this.currentLang;
+                this.updateLangButton();
+            }
+
+            setLanguage(lang) {
+                if (translations[lang]) {
+                    this.currentLang = lang;
+                    localStorage.setItem('userLanguage', lang);
+                    document.documentElement.lang = lang;
+                    this.updateContent();
+                    this.updateWorkshopDetails();
+                    this.updateLangButton(); 
+                }
+            }
+
+            updateLangButton() {
+                const button = document.getElementById('langSwitch');
+                if (button) {
+                    button.textContent = this.currentLang === 'it' ? 'EN' : 'IT';
+                    button.onclick = () => this.setLanguage(this.currentLang === 'it' ? 'en' : 'it');
+                }
+            }
+
+            translate(key) {
+                return translations[this.currentLang][key] || key;
+            }
+
+            updateContent() {
+                document.querySelectorAll('[data-i18n]').forEach(element => {
+                    const key = element.getAttribute('data-i18n');
+                    if (translations[this.currentLang][key]) {
+                        element.innerHTML = translations[this.currentLang][key];
+                    }
+                });
+            }
+
+            updateWorkshopDetails() {
+                const urlParams = new URLSearchParams(window.location.search);
+                const workshop = urlParams.get('workshop');
+                if (workshop && translations[this.currentLang].workshop_details[workshop]) {
+                    document.getElementById('workshopTitle').textContent = 
+                        translations[this.currentLang].registration_prefix + 
+                        translations[this.currentLang].workshop_details[workshop].title;
+                    document.getElementById('workshopDetails').textContent = 
+                        translations[this.currentLang].workshop_details[workshop].details;
+                }
+            }
+        }
+
+        let langManager;
+        document.addEventListener('DOMContentLoaded', () => {
+            langManager = new LanguageManager();
+            langManager.updateContent();
+            langManager.updateWorkshopDetails();
+        });
+
+        // Form validation function
+        function validateForm(event) {
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('telefono').value;
+            
+            // Email validation
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                alert('Please enter a valid email address');
+                event.preventDefault();
+                return false;
+            }
+            
+            // Phone validation
+            const phoneRegex = /^\+?[\d\s-]{8,}$/;
+            if (!phoneRegex.test(phone)) {
+                alert('Please enter a valid phone number');
+                event.preventDefault();
+                return false;
+            }
+
+            // reCAPTCHA validation
+            const recaptchaResponse = grecaptcha.getResponse();
+            if (!recaptchaResponse) {
+                alert('Please complete the reCAPTCHA');
+                event.preventDefault();
+                return false;
+            }
+
+            return true;
+        }
+    </script>
+</head>
+<body class="registration-page">
+    <div class="lang-selector">
+        <button class="lang-switch" id="langSwitch" onclick="langManager.setLanguage('it')">IT</button>
+    </div>
+
+    <div class="form-container">
+        <div class="workshop-header">
+            <h1 class="workshop-title" id="workshopTitle" data-i18n="workshop_registration">Workshop registration</h1>
+            <div class="workshop-details" id="workshopDetails"></div>
+        </div>
+
+        <form action="https://formspree.io/f/mldenwbq" 
+              method="POST" 
+              class="registration-form"
+              onsubmit="return validateForm(event)">
+            
+            <!-- Honeypot field -->
+            <input type="text" 
+                   name="_honey" 
+                   style="display: none" 
+                   tabindex="-1" 
+                   autocomplete="off">
+
+            <div class="form-group">
+                <label for="nome" data-i18n="name">Name *</label>
+                <input type="text" 
+                       id="nome" 
+                       name="nome" 
+                       required 
+                       pattern="[A-Za-z\s]{2,50}"
+                       maxlength="50"
+                       onkeypress="return /[A-Za-z\s]/i.test(event.key)">
+            </div>
+
+            <div class="form-group">
+                <label for="cognome" data-i18n="surname">Surname *</label>
+                <input type="text" 
+                       id="cognome" 
+                       name="cognome" 
+                       required 
+                       pattern="[A-Za-z\s]{2,50}"
+                       maxlength="50"
+                       onkeypress="return /[A-Za-z\s]/i.test(event.key)">
+            </div>
+
+            <div class="form-group">
+                <label for="email" data-i18n="email">Email *</label>
+                <input type="email" 
+                       id="email" 
+                       name="email" 
+                       required 
+                       maxlength="100">
+            </div>
+
+            <div class="form-group">
+                <label for="telefono" data-i18n="phone">Phone Number *</label>
+                <input type="tel" 
+                       id="telefono" 
+                       name="telefono" 
+                       required 
+                       pattern="[\d\s\-\+]{8,}"
+                       maxlength="20"
+                       onkeypress="return /[\d\s\-\+]/i.test(event.key)">
+            </div>
+
+            <div class="form-group">
+                <label for="workshop-selection" data-i18n="workshop">Select Workshop *</label>
+                <select id="workshop-selection" 
+                        name="workshop" 
+                        required>
+                    <option value="">Select a workshop</option>
+                    <option value="senegal">Workshop Senegal</option>
+                    <option value="mexico">Workshop Mexico</option>
+                    <option value="cuba">Workshop Cuba</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="messaggio" data-i18n="message">Message</label>
+                <textarea id="messaggio" 
+                         name="messaggio"
+                         maxlength="1000"></textarea>
+            </div>
+<input type="hidden" name="_next" value="grazie.html">
+
+<button type="submit" 
+        class="submit-button" 
+        data-i18n="send_registration">Send Registration</button>
+        </form>
+    </div>
+
+    <!-- Optional: Add rate limiting script -->
+    <script>
+        const submitButton = document.querySelector('.submit-button');
+        let lastSubmitTime = 0;
+        const THROTTLE_TIME = 30000; // 30 seconds
+
+        submitButton.addEventListener('click', (e) => {
+            const now = Date.now();
+            if (now - lastSubmitTime < THROTTLE_TIME) {
+                e.preventDefault();
+                alert('Please wait before submitting again');
+                return false;
+            }
+            lastSubmitTime = now;
+        });
+    </script>
+</body>
+</html>

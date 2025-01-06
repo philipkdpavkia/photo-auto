@@ -23,14 +23,17 @@
     --hover-bg: rgba(0, 0, 0, 0.6);
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
+/* Reset CSS */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+/* Imposta dimensioni dei font in unità relative */
+html {
+    font-size: 16px; /* 1rem = 16px */
+    scroll-behavior: smooth;
 }
 
 body {
@@ -39,6 +42,7 @@ body {
     font-family: 'Space Grotesk', sans-serif;
     line-height: 1.6;
     overflow-x: hidden;
+    font-size: 1rem; /* 1rem = 16px */
 }
 
 /* Header e navigazione */
@@ -61,6 +65,16 @@ body {
     align-items: center;
     max-width: 1400px;
     margin: 0 auto;
+}
+.menu-item {
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--primary);
+    transition: var(--transition);
+}
+
+.menu-item:hover {
+    color: var(--accent);
 }
 
 .logo {
@@ -780,9 +794,50 @@ html {
             font-size: 1rem;
         }
     }
+    /* Select and Options Styles */
+    .registration-page select option {
+        background-color: #1a1a1a;
+        color: var(--primary);
+        padding: 1rem;
+    }
+
+    .registration-page select {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+        background-repeat: no-repeat;
+        background-position: right 1rem center;
+        background-size: 1em;
+    }
+
+    .registration-page select option:checked,
+    .registration-page select option:hover {
+        background-color: #4169E1;
+    }
+
+    .registration-page select option[value=""] {
+        color: rgba(255, 255, 255, 0.5);
+    }
+
+    /* Scrollbar Styles for Select */
+    .registration-page select::-webkit-scrollbar {
+        width: 8px;
+    }
+
+    .registration-page select::-webkit-scrollbar-track {
+        background: #1a1a1a;
+    }
+
+    .registration-page select::-webkit-scrollbar-thumb {
+        background: var(--accent);
+        border-radius: 4px;
+    }
 
     /* FAQ Section Base */
 .faq-section {
+    
+    margin-top: 80px;
     padding: 2rem;
     background: var(--background);
     color: var(--primary);

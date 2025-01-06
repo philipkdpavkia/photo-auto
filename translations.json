@@ -79,7 +79,7 @@
           "max_people": "Max 8 persone",
           "description": "Cattura la vita di strada vibrante della capitale cubana. Dai mercati mattutini ai locali notturni, immergiti nell'atmosfera unica dell'Havana.",
           "dates": "Prossime date: 12-19 Marzo 2025",
-          "button": "Dettagli Workshop"
+          "button": "Prenota Ora"
         },
         "senegal": {
           "title": "Avventure in Senegal",
@@ -87,7 +87,7 @@
           "max_people": "Max 8 persone",
           "description": "Vivi i colori e la cultura dell'Africa occidentale. Dai mercati vivaci ai tranquilli villaggi di pescatori, scopri l'anima autentica del Senegal.",
           "dates": "Prossime date: Dicembre 12-19 2025",
-          "button": "Dettagli Workshop"
+          "button": "Prenota Ora"
         },
         "mexico": {
           "title": "Dia de Muertos",
@@ -95,7 +95,7 @@
           "max_people": "Max 8 persone",
           "description": "Documenta una delle celebrazioni culturali più significative del Messico sulle montagne di Oaxaca. Cerimonie tradizionali, fotografia di strada e incontri autentici.",
           "dates": "Prossime date: 26 Ottobre - 3 novembre 2025",
-          "button": "Dettagli Workshop"
+          "button": "Prenota Ora"
         }
       }
     }
@@ -180,7 +180,7 @@
           "max_people": "Max 8 people",
           "description": "Capture the vibrant street life of Cuba's capital. From early morning markets to late-night music venues, immerse yourself in the unique atmosphere of Havana.",
           "dates": "Next dates: March 12-19 2025",
-          "button": "Workshop Details"
+          "button": "Book Now"
         },
         "senegal": {
           "title": "Senegal Adventures",
@@ -188,7 +188,7 @@
           "max_people": "Max 8 people",
           "description": "Experience the colors and culture of West Africa. From bustling markets to peaceful fishing villages, discover the authentic soul of Senegal.",
           "dates": "Next dates: December 12-19 2025",
-          "button": "Workshop Details"
+          "button": "Book Now"
         },
         "mexico": {
           "title": "Dia de Muertos",
@@ -196,7 +196,7 @@
           "max_people": "Max 8 people",
           "description": "Document one of Mexico's most significant cultural celebrations in the mountains of Oaxaca. Traditional ceremonies, street photography, and authentic encounters.",
           "dates": "Next dates: October 26 - November 3 2025",
-          "button": "Workshop Details"
+          "button": "Book Now"
         }
       }
     }

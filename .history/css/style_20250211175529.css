@@ -13,14 +13,14 @@
 }
 
 :root {
-    --primary: #FFFFFF;
-    --background: #121212;
+    --primary: #000000;
+    --background: #FFFFFF;
     --accent: #FF6161;
-    --secondary: #E0E0E0;
+    --secondary: #333333;
     --highlight: #FFD700;
     --transition: all 0.4s ease;
-    --overlay-bg: rgba(0, 0, 0, 0.4);
-    --hover-bg: rgba(0, 0, 0, 0.6);
+    --overlay-bg: rgba(255, 255, 255, 0.8);
+    --hover-bg: rgba(255, 255, 255, 0.9);
 }
 
 /* Reset CSS */
@@ -66,7 +66,6 @@ body {
     max-width: 1400px;
     margin: 0 auto;
 }
-
 .menu-item {
     cursor: pointer;
     text-decoration: none;
@@ -111,7 +110,6 @@ body {
     transform: scale(1.05);
     transition: transform 0.3s ease-in-out;
 }
-
 /* Hamburger Menu */
 .hamburger {
     display: none;
@@ -315,7 +313,6 @@ body {
     padding: 0;
     white-space: nowrap;
 }
-
 #gallery {
     padding-top: 8rem;
 }
@@ -464,7 +461,6 @@ html {
     transform: scale(1.05);
     transition: transform 0.3s ease-in-out;
 }
-
 /* Workshop Button */
 .workshop-button {
     display: inline-block;
@@ -508,6 +504,21 @@ html {
     .nav {
         padding-right: 5rem; /* Spazio extra a destra per evitare sovrapposizioni */
     }
+}
+/* Media Queries */
+@media screen and (min-width: 721px) and (max-width: 1024px) {
+    .nav-links {
+        gap: 1.5rem;
+    }
+
+    .instagram-link {
+        margin-right: 4rem;
+    }
+
+    .nav {
+        padding-right: 5rem;
+    }
+
 }
 
 @media screen and (max-width: 720px) {
@@ -674,19 +685,17 @@ html {
         padding: 0.2rem 0.4rem;
     }
 }
-
-/* Registration Page Styles */
-.registration-page {
-    background: var(--background);
-    min-height: 100vh;
-}
-
-.registration-page .form-container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 120px 2rem 4rem;
-}
-
+    /* Registration Page Styles */
+    .registration-page {
+        background: var(--background);
+        min-height: 100vh;
+    }
+    
+    .registration-page .form-container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 120px 2rem 4rem;
+    }
     
     .registration-page .workshop-header {
         margin-bottom: 4rem;
